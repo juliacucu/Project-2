@@ -19,10 +19,10 @@ const app = express();
 require('./config')(app);
 
 // default value for title local
-const projectName = 'lab-express-basic-auth';
+const projectName = 'Home Made Chef';
 const capitalized = string => string[0].toUpperCase() + string.slice(1).toLowerCase();
 
-app.locals.title = `${capitalized(projectName)}- Generated with Ironlauncher`;
+app.locals.title = `${capitalized(projectName)} `;
 
 // 👇 Start handling routes here
 const index = require('./routes/index');
@@ -31,6 +31,8 @@ app.use('/', index);
 const auth = require('./routes/auth');
 app.use('/', auth);
 
+const recipe = require('./routes/recipe');
+app.use('/', recipe);
 
 // ❗ To handle errors. Routes that don't exist or errors that you handle in specific routes
 require('./error-handling')(app);
