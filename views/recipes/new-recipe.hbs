@@ -1,19 +1,56 @@
-<h2>New celebrities</h2>
-
-<form action="/celebrities/create" method="post">
+<h2>Create your recipe</h2>
+<form action="/recipes/create" method="post">
     <label>
-        Name:
-        <input type="text" name="name" >
-    </label>
+        Title:
+        <input type="text" name="title" >
+    </label> <br>
    
     <label>
-        Occupation:
-        <input type="text" name="occupation">
-    </label>
+        Level:
+        <select name="select">
+        <option value="Easy">Easy</option>
+        <option value="Medium">Medium</option>
+        <option value="Pro Chef">Pro Chef</option>
+        </select>
+        
+    </label><br>
 
     <label>
-        Catch Phrase:
-        <input type="text" name="catchPhrase">
-    </label>
-     <button>Save changes</button>
+        Dish Type:
+        <select name="select">
+        <option value="Breakfast">Breakfast</option>
+        <option value="Lunch">Lunch</option>
+        <option value="Dinner">Dinner</option>
+        <option value="Drinks">Drinks</option>
+        <option value="Dessert">Dessert</option>
+        <option value="Other">Other</option>
+        </select>
+    </label><br>
+
+    <label>
+        Duration:
+        <input type="number" name="duration">
+    </label><br>
+
+    <label>
+        Creator:
+        <input type="text" name="creator">
+    </label><br>
+
+    <label>
+        Image url:
+        <input type="text" name="image">
+    </label><br>
+
+    <label>
+        Ingredients:
+        <textarea name="ingredients"></textarea>
+    </label><br>
+
+    <label>
+        Steps:
+        <textarea name="steps"></textarea>
+    </label><br>
+
+    <button>Save changes</button>
 </form>

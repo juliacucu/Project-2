@@ -2,9 +2,10 @@
 <div>
     {{#each recipe}}
     <div>
-      <img src="" alt=""> 
-      <p><b>Title:</b> {{title}}</p> 
-      <p><b></b></p>
+      <img src="{{image}}" alt="{{title}}"> 
+      <p>
+        <a href="/recipes/{{id}}">{{title}}</a>
+      </p> 
     </div>
     {{/each}}
 </div>

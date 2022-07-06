@@ -1,16 +1,36 @@
+<div class='container'>
+  <h1>{{title}}</h1>
+  <div>
+    <img src="{{image}}" alt="{{title}}"> 
+  </div>
+  <div>
+     <p><b>Level:</b> {{level}}</p> 
+  </div>
+  <div>
+     <p><b>Dish Type:</b> {{dishType}}</p> 
+  </div>
+  <div>
+     <p><b>Duration:</b> {{duration}}</p> 
+  </div>
+  <div>
+     <p><b>Creator:</b> {{creator}}</p> 
+  </div>
 
- <div>
-      <h3><b>Title:</b> {{response.title}}</h3>
-      <p><b>Genre:</b> {{response.genre}}</p>
-      <p><b>Plot:</b> {{response.plot}}</p>
-     
-    
-    </div>
-    <p><b>Cast:</b>
-    {{#each response.cast}}
-  {{this.name}}
-    {{/each}}
-    </p>
+  <div>
+    <h2>Ingredients:</h2>
+    <ul>
+      {{#each ingredients}}
+        <li>{{this}}</li>
+      {{/each}}
+    </ul>
+  </div>
+    <div>
+    <h2>Steps:</h2>
+    <ol>
+      {{#each steps}}
+        <li>{{this}}</li>
+      {{/each}}
+    </ol>
+  </div>
+
 </div>
-
-<button class="Delete">Delete</button>
