@@ -1,0 +1,65 @@
+<h2>Update the recipe: {{recipe.title}}</h2>
+
+<form action="/recipes/{{recipe._id}}/update" method="post">
+    
+  <div class="form-group">
+    <label for="exampleInputEmail1">Title</label>
+    <input type="text" class="form-control" name="title" aria-describedby="emailHelp" value="{{recipe.title}}">
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+          <div class="form-group">
+             <label for="exampleInputEmail1">Level
+                <select class="form-control" name="select" value="{{recipe.level}}">
+                <option value="Easy">Easy</option>
+                <option value="Medium">Medium</option>
+                <option value="Pro Chef">Pro Chef</option>
+            </select> 
+    </label>
+  </div>
+</div>
+
+    <div class="col-md-6">
+<div class="form-group">
+    <label class="control-label">
+        Dish Type:
+        <select class="form-control" name="select" value="{{recipe.dishType}}">
+        <option value="Breakfast">Breakfast</option>
+        <option value="Lunch">Lunch</option>
+        <option value="Dinner">Dinner</option>
+        <option value="Drinks">Drinks</option>
+        <option value="Dessert">Dessert</option>
+        <option value="Other">Other</option>
+        </select>
+    </label>
+</div>
+    </div>
+  </div>
+  
+  <div class="form-group">
+    <label for="exampleInputEmail1">Duration</label>
+    <input type="number" class="form-control" name="duration" aria-describedby="emailHelp"value="{{recipe.duration}}">
+  </div>
+
+  <div class="form-group">
+    <label for="exampleInputEmail1">Creator</label>
+    <input type="text" class="form-control" name="creator" aria-describedby="emailHelp" value="{{recipe.creator}}">
+  </div>
+
+ <div class="form-group">
+    <label for="exampleInputEmail1">Image URL</label>
+    <input type="text" class="form-control" name="image" aria-describedby="emailHelp" value="{{recipe.image}}" >
+  </div>
+
+     <div class="form-group">
+    <label for="exampleInputEmail1">Ingredients</label>
+    <textarea type="text" class="form-control" name="ingredients" aria-describedby="emailHelp"value="{{recipe.ingredients}}">{{recipe.ingredients}}</textarea>
+     </div>
+
+   <div class="form-group">
+    <label for="exampleInputEmail1">Steps</label>
+    <textarea type="text" class="form-control" name="steps" aria-describedby="emailHelp"value="{{recipe.steps}}">{{recipe.steps}}</textarea>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Save changes</button>

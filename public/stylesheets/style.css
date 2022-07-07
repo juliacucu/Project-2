@@ -1,14 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Playfair+Display&display=swap');
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  margin: 20px;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;  ;
+  line-height: 3.5em;
+  weight: 300;
+
 }
 
 a {
   color: #00b7ff;
 }
 
-h1 {
-  color: 15px;
+h1, h2, h3, h4{
+  font-family: 'Playfair Display', serif;
+  color: black;
+  
 }
 
 .error{
@@ -17,4 +24,90 @@ h1 {
 
 .img-header {
   height: 500px;
+}
+
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+}
+
+.b-example-divider {
+  height: 3rem;
+  background-color: rgba(0, 0, 0, .1);
+  border: solid rgba(0, 0, 0, .15);
+  border-width: 1px 0;
+  box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+}
+
+.b-example-vr {
+  flex-shrink: 0;
+  width: 1.5rem;
+  height: 100vh;
+}
+
+.bi {
+  vertical-align: -.125em;
+  fill: currentColor;
+}
+
+.nav-scroller {
+  position: relative;
+  z-index: 2;
+  height: 2.75rem;
+  overflow-y: hidden;
+}
+
+.nav-scroller .nav {
+  display: flex;
+  flex-wrap: nowrap;
+  padding-bottom: 1rem;
+  margin-top: -1px;
+  overflow-x: auto;
+  text-align: center;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
+.button-myApp{
+  color: white;
+  background-color: #AB8E72;
+  border-color: #AB8E72;
+}
+.button-myApp:hover{
+  background-color: #826E5A;
+  border-color: #826E5A;
+}
+
+.img-recipe-detail{
+  max-width: 100%;
+}
+
+.card.shadow-sm {
+  margin-bottom: 25px;
+}
+p.card-text {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.gradient-custom {
+  background: #EBDAC9;
+  }
+
+  .img-recipe-detail {
+    margin-top: 0px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    margin-left: 0px;
+  }
+
+.form-group{
+  display: flexbox,
 }

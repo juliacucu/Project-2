@@ -1,11 +1,18 @@
 <h2>Recipes</h2>
-<div>
-    {{#each recipe}}
-    <div>
-      <img src="{{image}}" alt="{{title}}"> 
-      <p>
-        <a href="/recipes/{{id}}">{{title}}</a>
-      </p> 
+<div class="row">
+{{#each recipe}}
+  <div class="col-4">
+  <div class="card shadow-sm">
+    <img class="card-img-top" src="{{image}}" alt="{{title}}">
+    <div class="card-body">
+      <p class="card-text"><b>{{title}}</b></p>
+      <div class="d-flex justify-content-between align-items-center">
+        <div class="btn-group">
+          <a role="button" class="btn btn-sm btn-outline-secondary" href="/recipes/{{id}}">Read more</a>
+        </div>
+      </div>
     </div>
-    {{/each}}
+  </div>
+</div>
+{{/each}}
 </div>

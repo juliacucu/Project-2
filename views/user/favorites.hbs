@@ -1,0 +1,25 @@
+<div class="row">
+{{#each user.favorites}}
+  <div class="col-4">
+  <div class="card shadow-sm">
+    <img class="card-img-top" src="{{image}}" alt="{{title}}">
+    <div class="card-body">
+      <p class="card-text"><b>{{title}}</b></p>
+      <div class="d-flex justify-content-between align-items-center">
+        <div class="btn-group">
+          <a role="button" class="btn btn-sm btn-outline-secondary" href="/recipes/{{id}}">Read more</a>
+          <form action="/recipes/add-favorite/{{id}}" method="POST">
+            <button class="btn btn-sm btn-outline-secondary" type="submit">Delete</button>
+            </form>
+            <a href="/recipes/{{id}}/update">
+            {{!-- <form action="/{{id}}/update" method="POST"> --}}
+            <button class="btn btn-sm btn-outline-secondary" type="submit">Update</button></a>
+         
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{{/each}}
+</div>
+   
