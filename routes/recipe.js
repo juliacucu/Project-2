@@ -43,7 +43,7 @@ router.post("/create", isLoggedIn, (req, res, next) => {
     created,
     image,
     ingredients,
-    steps,
+    steps
   } = req.body;
 
   Recipe.create({
@@ -55,10 +55,24 @@ router.post("/create", isLoggedIn, (req, res, next) => {
     created,
     image,
     ingredients,
-    steps,
+    steps
   })
     .then((createdRecipe) => res.redirect("/recipes"))
     .catch((error) => next(error));
 });
+
+router.post("/add-favorite", isLoggedIn, (req, res) => {
+const query = ({   
+  title,
+  level,
+  dishType,
+  duration,
+  creator,
+  created,
+  image,
+  ingredients,
+  steps} = req.body);
+});
+
 
 module.exports = router;
